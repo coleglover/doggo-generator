@@ -1,0 +1,23 @@
+{
+  "name": "doggo-generator",
+  "version": "1.0.0",
+  "description": "this program generates random images of dogs",
+  "main": "doggos.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/coleglover/doggo-generator.git"
+  },
+  "keywords": [
+    "doggos"
+  ],
+  "author": "cole glover",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coleglover/doggo-generator/issues"
+  },
+  "homepage": "https://github.com/coleglover/doggo-generator#readme"
+}
