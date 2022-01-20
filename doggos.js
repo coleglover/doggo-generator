@@ -12,7 +12,7 @@ function addNewDoggo() {
     .then(processedResponse => {
       const img = document.createElement('img');
       img.src = processedResponse.message;
-      img.alt = 'Cute doggos';
+      img.alt = 'Cute doggo';
       doggos.appendChild(img);
     });
 }

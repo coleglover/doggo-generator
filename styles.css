@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+
+.loading {
+  display: flex;
+  justify-content: left;
+}
+
+.loading::after {
+  content: '';
+  border: 16px solid #f3f3f3; /* light grey */
+  border-top: 16px solid #009579; /* blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes loading {
+  to {
+    transform: rotate(1turn);
+  }
+}
