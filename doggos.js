@@ -1,6 +1,6 @@
 //import fetch from "node-fetch"
-
-const doggos = document.querySelector('.doggos');
+window.addEventListener('load', hideSpinner);
+const doggos = document.getElementById('doggos');
 
 //fetch returns a promise - similar to a callback. A promise, like callbacks, allows you to deal with things asynchronously.
 
@@ -16,5 +16,11 @@ function addNewDoggo() {
       doggos.appendChild(img);
     });
 }
+function hideSpinner() {
+  let d = getElementById('loading');
+  document.removeChild(d);
+}
 
-document.querySelector('.add-doggo').addEventListener('click', addNewDoggo);
+document.getElementById('add-doggo').addEventListener('click', addNewDoggo);
+
+window.getElementById('loading-wrapper').addEventListener('load', hideSpinner);

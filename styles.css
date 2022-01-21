@@ -2,19 +2,26 @@
   box-sizing: border-box;
 }
 
-.loading {
+#loading-wrapper {
+  margin-top: 20px;
+  width: 200px; 
+  height: 120px; 
+  border: 3px solid black"
+}
+
+#loading {
   display: flex;
   justify-content: left;
 }
 
-.loading::after {
+#loading::after {
   content: '';
   border: 16px solid #f3f3f3; /* light grey */
-  border-top: 16px solid #009579; /* blue */
+  border-top: 16px solid #009579; /* green */
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  animation: spin 1s linear infinite;
+  width: 60px;
+  height: 60px;
+  animation: loading 1s linear infinite;
 }
 
 @keyframes loading {
