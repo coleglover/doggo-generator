@@ -6,15 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
+
+    <!--- import fonts --->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
-    <h1>Doggos</h1>
-    <button id="add-doggo" class="add-doggo-button">Add Doggo</button>
-    <div id="loading-wrapper">
-      <div id="loading"></div>
+    <div id="header">
+      <div class="logo">doggos.</div>
     </div>
-    <div id="doggos"></div>
+
+    <div class="random-subheader">
+      <div class="subheader logo">random</div>
+      <div class="button-container">
+        <button class="add-doggo-button">add doggo</button>
+      </div>
+    </div>
+    <div class="by-breed-subheader">
+      <div class="subheader logo">by breed</div>
+      <div class="button-container">
+        <button class="add-doggo-button">add doggo</button>
+      </div>
+    </div>
+
+    <div class="doggo-crate"></div>
 
     <script src="./doggos.js"></script>
   </body>

@@ -2,25 +2,62 @@
   box-sizing: border-box;
 }
 
-#loading-wrapper {
-  margin-top: 20px;
-  width: 200px; 
-  height: 120px; 
-  border: 3px solid black"
+#header {
+  width: 100%;
+  padding: 30px 60px;
 }
 
-#loading {
+.logo {
+  font-family: 'Lobster', cursive;
+  font-size: 4.5rem;
+}
+
+.subheader {
+  font-size: 3.3rem;
+  padding: 10px 60px;
+}
+
+.doggo-crate {
   display: flex;
-  justify-content: left;
+  flex-wrap: wrap;
 }
 
-#loading::after {
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px 60px;
+}
+.add-doggo-button {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-right: 15px;
+}
+
+.loading-wrapper {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+  height: 400px;
+  /*can you specify width by aspect ratio?*/
+}
+
+.loading-wrapper img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.loading {
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.loading::after {
   content: '';
-  border: 16px solid #f3f3f3; /* light grey */
-  border-top: 16px solid #009579; /* green */
+  border: 10px solid #f3f3f3; /* light grey */
+  border-top: 10px solid #0899ce; /* green */
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   animation: loading 1s linear infinite;
 }
 
