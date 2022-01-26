@@ -1,6 +1,6 @@
 //import fetch from "node-fetch"
 //window.addEventListener('load', hideSpinner);
-const doggos = document.querySelector('.doggo-crate');
+const doggos = document.querySelector('.doggo-container');
 
 //fetch returns a promise - similar to a callback. A promise, like callbacks, allows you to deal with things asynchronously.
 
@@ -18,9 +18,13 @@ function addLoader() {
 }
 
 function dogButtonHandler() {
-  console.log('this should run');
   const newImageWrapper = addLoader();
   addNewDoggo(newImageWrapper);
+}
+
+function dogBreedButtonHandler() {
+  const newImageWrapper = addLoader();
+  addNewBreed(newImageWrapper);
 }
 
 function removeLoader(imageWrapper) {
@@ -42,9 +46,28 @@ function addNewDoggo(imageWrapper) {
     });
 }
 
+function addNewBreed(imageWrapper) {
+  fetch('https://dog.ceo/api/breed/hound/images/random')
+    .then(response => {
+      return response.json(); // returns JSON blob
+    })
+    .then(processedResponse => {
+      const img = document.createElement('img');
+      img.src = processedResponse.message;
+      img.alt = 'Cute doggo';
+      removeLoader(imageWrapper);
+      imageWrapper.appendChild(img);
+    });
+}
+
 document
   .querySelector('.add-doggo-button')
   .addEventListener('click', dogButtonHandler);
+
+//add a function here to disern what breed is being clicked
+document
+  .querySelector('.add-doberman-button')
+  .addEventListener('click', dogBreedButtonHandler);
 
 // click button
 // add loader
