@@ -68,13 +68,11 @@ document
   .addEventListener('click', dogButtonHandler);
 
 //add a function here to disern what breed is being clicked
-document
-  .querySelector('.add-doberman')
-  .addEventListener('click', dogBreedButtonHandler);
 
-let whippet = document.querySelector('.add-whippet');
-
-whippet.addEventListener(`click`, () => {
+document.querySelector('.add-doberman').addEventListener(`click`, () => {
+  return dogBreedButtonHandler('doberman');
+});
+document.querySelector('.add-whippet').addEventListener(`click`, () => {
   return dogBreedButtonHandler('whippet');
 });
 
