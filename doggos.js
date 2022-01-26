@@ -22,9 +22,9 @@ function dogButtonHandler() {
   addNewDoggo(newImageWrapper);
 }
 
-function dogBreedButtonHandler() {
+function dogBreedButtonHandler(dogBreed) {
   const newImageWrapper = addLoader();
-  addNewBreed(newImageWrapper);
+  addNewBreed(newImageWrapper, dogBreed);
 }
 
 function removeLoader(imageWrapper) {
@@ -35,6 +35,7 @@ function removeLoader(imageWrapper) {
 function addNewDoggo(imageWrapper) {
   fetch('https://dog.ceo/api/breeds/image/random')
     .then(response => {
+      console.log(JSON.stringify(response.json));
       return response.json(); // returns JSON blob
     })
     .then(processedResponse => {
@@ -46,9 +47,11 @@ function addNewDoggo(imageWrapper) {
     });
 }
 
-function addNewBreed(imageWrapper) {
-  fetch('https://dog.ceo/api/breed/hound/images/random')
+function addNewBreed(imageWrapper, dogBreed) {
+  fetch(`https://dog.ceo/api/${dogBreed}/germansheperd/images/random`)
     .then(response => {
+      var str = JSON.stringify(response.json);
+      console.log(str);
       return response.json(); // returns JSON blob
     })
     .then(processedResponse => {
@@ -66,8 +69,14 @@ document
 
 //add a function here to disern what breed is being clicked
 document
-  .querySelector('.add-doberman-button')
+  .querySelector('.add-doberman')
   .addEventListener('click', dogBreedButtonHandler);
+
+let whippet = document
+  .querySelector('.add-whippet')
+  .addEventListener(`click`, () => {
+    return dogBreedButtonHandler(whippet);
+  });
 
 // click button
 // add loader
