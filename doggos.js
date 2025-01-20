@@ -67,25 +67,32 @@ document
   .querySelector('.add-doggo-button')
   .addEventListener('click', dogButtonHandler);
 
-//add a function here to disern what breed is being clicked
-document
-  .querySelector('.add-doberman')
-  .addEventListener('click', dogBreedButtonHandler);
+//adding functions here to disern what breed is being clicked
 
-let whippet = document.querySelector('.add-whippet');
-
-whippet.addEventListener(`click`, () => {
+document.querySelector('.add-doberman').addEventListener(`click`, () => {
+  return dogBreedButtonHandler('doberman');
+});
+document.querySelector('.add-whippet').addEventListener(`click`, () => {
   return dogBreedButtonHandler('whippet');
 });
+document.querySelector('.add-germanshepherd').addEventListener(`click`, () => {
+  return dogBreedButtonHandler('germanshepherd');
+});
 
-// click button
-// add loader
-// create img
-// remove loader
-//
-//
-//
+document.querySelector('.add-vizsla').addEventListener(`click`, () => {
+  return dogBreedButtonHandler('vizsla');
+});
 
-// dogButtonHandler
-// -calls add contianer + loader
-// -calls addNewDoggo
+document
+  .querySelector('.add-jack-russell-terrier')
+  .addEventListener(`click`, () => {
+    return dogBreedButtonHandler('terrier/russell');
+  });
+
+document.querySelector('.add-borzoi').addEventListener(`click`, () => {
+  return dogBreedButtonHandler('borzoi');
+});
+
+document.querySelector('.add-chihuahua').addEventListener(`click`, () => {
+  return dogBreedButtonHandler('chihuahua');
+});
